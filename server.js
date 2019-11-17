@@ -2,18 +2,22 @@ const express = require('express')
 const app = express()
 
 app.get('/',(req,res)=>{
-    console.log('Hello this is the sample app')
+    res.send('Hello this is the sample app')
 })
 
-app.get('/hiii',(req,res)=>{
-    console.log('hiii'  + req.query.name)
+app.get('/hii',(req,res)=>{
+    res.send('hiii'  + req.query.name)
 })
 
 app.get('/bye',(req,res)=>{
-    console.log('GoodBye!'  + req.query.name)
+    res.send('GoodBye!'  + req.query.name)
+})
+
+app.get('/app',(req,res)=>{
+    res.send('welcome to main app')
 })
 
 
-app.listen(4433,()=>{
- console.log('localhost')
+app.listen(PORT,()=>{
+ console.log('localhost' + PORT)
 })
